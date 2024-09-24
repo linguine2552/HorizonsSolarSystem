@@ -1,0 +1,162 @@
+.solar-system-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 400px;
+  background: black;
+  cursor: crosshair;
+}
+
+.view-toggle-button {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  z-index: 1000;
+  background: none;
+  color: #00ff00;
+  border: none;
+  padding: 5px 10px;
+  font-family: monospace;
+  cursor: pointer;
+}
+
+.star-map-label {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #00ff00;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+.label {
+  color: #00ff00;
+  font-size: 12px;
+  font-family: monospace;
+}
+
+.filter-container {
+  position: absolute;
+  top: 10px;
+  left: 100px;
+  z-index: 1000;
+}
+
+.filter-select {
+  background: #000;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  padding: 5px 10px;
+  font-family: monospace;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);  
+}
+
+.controls-info {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #00ff00;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+.glossary-toggle-button {
+  position: absolute;
+  top: 12%;
+  left: 11.5%;
+  z-index: 1001;
+  background: none;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  border-radius: 0.1px;
+  padding: 5px 10px;
+  font-family: monospace;
+  cursor: pointer;
+}
+
+.glossary-toggle-button:hover {
+  border: 1px solid #00ff00;  		
+}
+
+.glossary-container {
+  position: absolute;
+  top: 15%;
+  left: 1%;
+  width: 250px;
+  max-height: 53%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid #00ff00;
+  color: #00ff00;
+  font-family: monospace;
+  padding: 10px;
+  z-index: 0;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.glossary-container.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.glossary-container.hidden {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.search-input {
+  width: 95%;
+  background: #000;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  padding: 5px;
+  margin-bottom: 10px;
+  font-family: monospace;
+  outline: none;
+}
+
+.glossary-container h3 {
+  margin-top: 0;
+  border-bottom: 1px solid #00ff00;
+  padding-bottom: 5px;
+}
+
+.glossary-container ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.glossary-item {
+  cursor: pointer;
+  padding: 5px 0;
+  transition: background-color 0.3s;
+}
+
+.glossary-item:hover {
+  background-color: rgba(0, 255, 0, 0.2);
+}
+
+.glossary-item.selected {
+  background-color: rgba(0, 255, 0, 0.4);
+}
+
+.labels-toggle-button {
+  position: absolute;
+  top: 1%;
+  left: 16%;
+  z-index: 1001;
+  background: none;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  border-radius: 0.1px;
+  padding: 5px 10px;
+  font-family: monospace;
+  cursor: pointer;
+}
+
+.labels-toggle-button:hover {
+  border: 1px solid #00ff00;  	
+}

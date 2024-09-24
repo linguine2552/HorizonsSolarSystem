@@ -1,0 +1,231 @@
+@import url(https://fonts.googleapis.com/css?family=VT323);
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background-color: #000000;
+  font-family: "VT323", monospace;
+}
+
+#root {
+  height: 104%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+:root {
+  --orange-glow: 0 0 2px #ff8c00, 0 0 4px #ff8c00, 0 0 6px #ff8c00, 0 0 8px #ff8c00, 0 0 10px #ff8c00;
+  --yellow-glow: 0 0 2px #ff8c00, 0 0 4px #fdab4c,  0 0 15px #fdd14c;
+}
+
+
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+}
+
+.loading-message {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0f0;
+}
+
+.password-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.password-input {
+  background-color: transparent;
+  border: 1px solid #00ff00;
+  color: #00ff00;
+  font-family: inherit;
+  padding: 5px;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+.file-input {
+  outline: none;	
+}
+
+.error-message {
+  color: #ff0000;
+  margin-top: 10px;
+}
+
+.password-hint {
+  margin-top: 0px;
+}
+
+.qr-code {
+  display: inline-block;
+  background-color: black;
+  padding: 10px;
+}
+
+.qr-row {
+  display: flex;
+}
+
+.qr-cell {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #00ff00;
+}
+
+.qr-cell.active {
+  background-color: #00ff00;
+}
+
+.custom-password-display {
+  display: flex;
+  gap: 5px;
+  background-color: black;
+  padding: 5px;
+  border-radius: 4px;
+  min-height: 30px;
+  align-items: center;
+}
+
+.custom-char {
+  display: inline-block;
+  background-color: black;
+  padding: 2px;
+}
+
+.char-row {
+  display: flex;
+}
+
+.char-cell {
+  width: 4px;
+  height: 4px;
+  border: 1px solid #00ff00;
+}
+
+.char-cell.active {
+  background-color: #00ff00;
+}
+
+.custom-input-wrapper {
+  cursor: text;
+}
+
+.app-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.loading-overlay {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  color: #0f0;
+  position: relative;
+}
+
+.top,
+.bottom,
+.terminal,
+.systime,
+.cordata,
+.version {
+  box-shadow: 0 0 6px rgba(0, 255, 0, 0.5), 0 0 12px rgba(0, 255, 0, 0.3), 0 0 24px rgba(0, 255, 0, 0.1);
+}
+
+.sysname {
+  --enhanced-glow: var(--yellow-glow);
+  text-shadow: var(--enhanced-glow);
+}
+
+.crosshair-quadrant::before,
+.crosshair-quadrant::after,
+.icon {
+  --enhanced-glow: var(--orange-glow);
+  text-shadow: var(--enhanced-glow);
+  color: #ffae00;
+}
+
+.crosshair-quadrant::before,
+.crosshair-quadrant::after {
+  box-shadow: var(--enhanced-glow);
+}
+
+.entrance {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5rem;
+  color: #00ff00;
+  background-color: #000;
+  border: 2px solid #00ff00;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  text-shadow:
+    0 0 5px #00ff00,
+    0 0 10px #00ff00;
+}
+
+.entrance:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(0, 255, 0, 0.4),
+    transparent
+  );
+  transition: all 0.5s;
+}
+
+.entrance:hover:before {
+  left: 100%;
+}
+
+@keyframes pulsate {
+  from {
+    text-shadow:
+      0 0 5px #00ff00,
+      0 0 10px #00ff00;
+    box-shadow: 
+      0 0 10px #00ff00,
+      0 0 20px #00ff00,
+      0 0 40px #00ff00;
+  }
+  to {
+    text-shadow:
+      0 0 5px #00ff00,
+      0 0 10px #00ff00,
+      0 0 15px #00ff00;
+    box-shadow: 
+      0 0 15px #00ff00,
+      0 0 25px #00ff00,
+      0 0 50px #00ff00;
+  }
+}
